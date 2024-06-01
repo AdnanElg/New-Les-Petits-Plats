@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!-- ******* START HEAD ********** -->
+  <head>
+    <!-- meta : -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Les Petits Plats est un site de recettes
+    de cuisine à l'instar de Marmiton ou 750g"
+    />
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
+    <!--  Link Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Link Styles -->
+    <link rel="stylesheet" href="./src/sass/styles.scss" />
+    <!-- Script -->
+    <script type="module" src="./src/index.ts"></script>
+    <!-- Title -->
+    <title>Les Petits Plats</title>
+  </head>
+  <!-- ******* END HEAD ********** -->
+  <body class="bg-secondary-subtle">
+    <!-- ******* START HEADER ********** -->
+    <header class="header-img img-fluid">
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-4">
+            <img
+              class="w-100 img-fluid"
+              src="./src/assets/img/logo.png"
+              alt="logo les petits plats"
+            />
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-8"></div>
+        </div>
+      </div>
+      <div class="container py-5">
+        <div class="row pt-5">
+          <div class="col-12 my-3">
+            <h1 class="text-center text-warning lh-base display-5 font-anton">
+              CHERCHEZ PARMI PLUS DE 1500 RECETTES <br />
+              DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
+            </h1>
+          </div>
+        </div>
+        <div class="row py-2 mb-5">
+          <div
+            class="col-12 d-flex justify-content-center align-items-center position-relative mb-5"
+          >
+            <input
+              id="search-input"
+              type="text"
+              class="form-control py-3 border-0 mb-5 fs-5 ps-4 text-secondary"
+              placeholder="Rechercher une recette, un ingrédient..."
+              title="Veuillez saisir uniquement des lettres et espaces."
+            />
+            <div
+              class="d-flex justify-content-center align-items-center"
+              id="close-search"
+            >
+              <img src="./src/assets/svg/close-search.svg" alt="icône close" />
+            </div>
+            <button
+              type="button"
+              class="bg-dark border-0 rounded-3 d-flex justify-content-center align-items-center"
+              id="btn-search"
+            >
+              <img src="./src/assets/svg/search-white.svg" alt="icône search" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ******* END HEADER ********** -->
+    <main class="pb-3 mb-3 mx-auto w-lg-95 mt-4">
+      <!-- ******* START SECTION 1 ********** -->
+      <section id="section-1" class="m-lg-4 m-md-2">
+        <!-- <div class="container-fluid">
+          <div class="row">
+            <div
+              class="gap-md-5 col-lg-6 col-md-12 d-flex flex-column flex-md-row"
+            >
+              <div class="w-auto col-lg-2 col-md-4 mb-3">
+                <div id="select-ingredients" class="wrapper">
+                  <div class="select-btn bg-white">
+                    <span>Ingrédients</span>
+                    <img
+                      src="./src/assets/svg/arrow-bottom.svg"
+                      alt="icône arrow-bottom"
+                    />
+                  </div>
+                  <div class="content bg-white content--active-dropdown">
+                    <div class="search">
+                      <input class="border border-secondary" type="text" />
+                      <img
+                        class="close-search close-search--active"
+                        src="./src/assets/svg/close-tag.svg"
+                        alt="icône close"
+                      />
+                      <img
+                        src="./src/assets/svg/search-grey.svg"
+                        alt="icône search"
+                      />
+                    </div>
+                    <ul class="options">
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-auto col-lg-2 col-md-4 mb-3">
+                <div id="select-devices" class="wrapper">
+                  <div class="select-btn bg-white">
+                    <span>Appareils</span>
+                    <img
+                      src="./src/assets/svg/arrow-bottom.svg"
+                      alt="icône arrow-bottom"
+                    />
+                  </div>
+                  <div class="content bg-white content--active-dropdown">
+                    <div class="search">
+                      <input class="border border-secondary" type="text" />
+                      <img
+                        class="close-search close-search--active"
+                        src="./src/assets/svg/close-tag.svg"
+                        alt="icône close"
+                      />
+                      <img
+                        src="./src/assets/svg/search-grey.svg"
+                        alt="icône search"
+                      />
+                    </div>
+
+                    <ul class="options">
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-auto col-lg-2 col-md-4 mb-3">
+                <div id="select-utensils" class="wrapper">
+                  <div class="select-btn bg-white">
+                    <span>Ustensils</span>
+                    <img
+                      src="./src/assets/svg/arrow-bottom.svg"
+                      alt="icône arrow-bottom"
+                    />
+                  </div>
+                  <div class="content bg-white content--active-dropdown">
+                    <div class="search">
+                      <input class="border border-secondary" type="text" />
+                      <img
+                        class="close-search close-search--active"
+                        src="./src/assets/svg/close-tag.svg"
+                        alt="icône close"
+                      />
+                      <img
+                        src="./src/assets/svg/search-grey.svg"
+                        alt="icône search"
+                      />
+                    </div>
+                    <ul class="options">
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                      <li>
+                        Australia
+                        <img
+                          class="tag-active"
+                          src="./src/assets/svg/close-item.svg"
+                          alt="icône close"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-4 custom-flex-recipes">
+              <span id="total-recipes" class="fs-4 fw-bold font-anton"
+                >1500 recettes</span
+              >
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <!-- ******* END SECTION 1 ********** -->
+      <!-- ******* START SECTION 2 ********** -->
+      <section id="section-2" class="m-lg-4 m-md-2 section-tag">
+        <!-- <div class="container-fluid">
+          <ul
+            id="lists-tag"
+            class="d-flex justify-content-start align-items-start flex-wrap p-0 gap-4"
+          >
+            <li
+              id="tag"
+              class="p-3 bg-warning rounded d-flex justify-content-between align-items-center fs-6 fw-medium rounded-3"
+            >
+              Ananas
+              <img src="./src/assets/svg/close-tag.svg" alt="icône close" />
+            </li>
+          </ul>
+        </div> -->
+      </section>
+      <!-- ******* END SECTION 2 ********** -->
+      <!-- ******* START SECTION 3 ********** -->
+      <section id="section-3" class="m-lg-4 m-md-2">
+        <div class="container-fluid">
+          <div class="card-group gap-5 mt-5">
+            <div class="row">
+              <!-- <div class="col-2lg-4 col-md-6 mb-5 pb-3">
+                <article class="card border-0 shadow-lg" id="card">
+                  <img
+                    class="card-img-top"
+                    src="./src/assets/img/Recette01.jpg"
+                    alt="Card image cap"
+                  />
+                  <div
+                    class="d-flex justify-content-center align-items-center position-absolute bg-warning rounded-5 px-3 py-1 m-3 end-0"
+                  >
+                    <p class="m-0">10min</p>
+                  </div>
+                  <div class="card-body mt-3">
+                    <h5 class="card-title font-anton">Limonade de Coco</h5>
+                    <div class="mt-5 recipe-description">
+                      <h6 class="mb-3 fw-bold">RECETTE</h6>
+                      <p class="card-text text-start">
+                        Mettre les glaçons à votre goût dans le blender, Ajouter
+                        le lait la crème de coco, le jus de 2 citrons et le
+                        sucre ensemble. Mixer jusqu'à obtenir la consistance
+                        désirée.
+                      </p>
+                    </div>
+                    <div class="mt-5 recipe-ingredient pb-3">
+                      <h6 class="mb-3 fw-bold">INGRÉDIENTS</h6>
+                      <div
+                        class="d-flex justify-content-between align-items-start w-lg-90"
+                      >
+                        <div
+                          class="d-flex flex-column justify-content-start align-items-start"
+                        >
+                          <div class="d-block mb-3">
+                            <p class="m-0 fw-medium">Lait de coco</p>
+                            <span class="text-tertiary">400ml</span>
+                          </div>
+                          <div class="d-block mb-3">
+                            <p class="m-0 fw-medium">Créme de coco</p>
+                            <span class="text-tertiary">4 cuillères</span>
+                          </div>
+                          <div class="d-block">
+                            <p class="m-0 fw-medium">Glaçons</p>
+                            <span class="text-tertiary">2</span>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex flex-column justify-content-start align-items-start"
+                        >
+                          <div class="d-block mb-3">
+                            <p class="m-0 fw-medium">Jus de citron</p>
+                            <span class="text-tertiary">2</span>
+                          </div>
+                          <div class="d-block">
+                            <p class="m-0 fw-medium">Sucre</p>
+                            <span class="text-tertiary">20g</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ******* END SECTION 3 ********** -->
+    </main>
+  </body>
+</html>

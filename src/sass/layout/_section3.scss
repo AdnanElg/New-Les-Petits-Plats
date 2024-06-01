@@ -1,0 +1,48 @@
+// ******** START SECTION 3 *********** //
+#card {
+  border-radius: 20px;
+
+  img {
+    border-radius: 20px 20px 0px 0px;
+    height: 253px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.recipe-description {
+  display: block;
+
+  h6 {
+    color: $tertiary;
+    letter-spacing: 1.5px;
+  }
+
+  p {
+    height: 100px;
+    overflow-y: scroll;
+  }
+}
+
+.recipe-ingredient {
+  display: block;
+
+  h6 {
+    color: $tertiary;
+    letter-spacing: 1.5px;
+  }
+
+  > div > div {
+    height: 195px;
+  }
+
+  > div > div > div > p {
+    @media screen and (max-width: 1850px) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 110px;
+    }
+  }
+}
+// ******** END SECTION 3 *********** //

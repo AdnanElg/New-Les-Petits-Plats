@@ -1,0 +1,19 @@
+{
+  "name": "new-p7-les-petits-plats",
+  "version": "1.0.0",
+  "description": "Les Petits Plats est un site de recettes de cuisine à l'instar de Marmiton ou 750g",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "El Ghalbzouri Adnan",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

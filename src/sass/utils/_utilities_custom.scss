@@ -1,0 +1,23 @@
+// Utilities custom :
+$utilities: (
+  // width custom :
+  "width":
+    (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        90: 90%,
+        95: 95%,
+      ),
+    ),
+  // colors custom :
+  "text":
+    (
+      property: color,
+      class: text,
+      values: (
+        "tertiary": $tertiary,
+      ),
+    )
+);
