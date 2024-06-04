@@ -46,7 +46,7 @@ export const services = {
       console.log(allAppliance);
       return allAppliance;
     } catch (error) {
-      throw new Error(`Error recovering devices : ${error}`);
+      throw new Error(`Error recovering appliance : ${error}`);
     }
   },
 

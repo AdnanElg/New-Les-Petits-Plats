@@ -1,6 +1,5 @@
-// Importation de la fonction dropdownSelects depuis le fichier dropdownSelects situé dans le dossier utils
-import { dropdownSelects } from "../utils/dropdownSelects";
-// ItemsType est importé depuis le fichier dropdowns.types situé dans le dossier types
+// Import modules
+import { recipes } from "../data/recipes";
 import { ItemsType } from "../types/dropdowns.types";
 
 // Fonction pour créer un dropdown
@@ -54,21 +53,18 @@ export const dropdowns = (
       <div class="z-2 gap-md-5 col-lg-6 col-md-12 d-flex flex-column flex-md-row">
         ${createDropdown(ingredients, "Ingrédients", "ingredients")}
         ${createDropdown(appliances, "Appareils", "appliances")}
-        ${createDropdown(ustensils, "Ustensils", "utensils")}
+        ${createDropdown(ustensils, "Ustensils", "ustensils")}
       </div>
       <div class="z-1 col-lg-6 col-md-4 custom-flex-recipes">
-        <span id="total-recipes" class="fs-4 fw-bold font-anton">1500 recettes</span>
+        <span id="total-recipes" class="fs-4 fw-bold font-anton">${
+          recipes.length
+        } recettes</span>
       </div>
     </div>
   `;
 
   // Assignation du modèle HTML à l'intérieur de l'élément div
   dropdownsContainer.innerHTML = dropdownsTemplate;
-
-  // Appel de la fonction dropdownSelects après un délai de 50 millisecondes pour initialiser les dropdowns
-  setTimeout(() => {
-    dropdownSelects();
-  }, 50);
 
   // Retourne l'élément div contenant les dropdowns
   return dropdownsContainer;

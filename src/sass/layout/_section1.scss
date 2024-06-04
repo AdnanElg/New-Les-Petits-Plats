@@ -73,7 +73,7 @@
       }
     }
 
-    &--active-utensils {
+    &--active-ustensils {
       display: none;
       position: absolute;
       width: inherit;
@@ -132,7 +132,7 @@
       list-style: none;
       margin-top: 10px;
       overflow-y: auto;
-      height: 180px;
+      max-height: 180px;
       margin-bottom: 0px;
 
       li {

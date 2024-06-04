@@ -1,7 +1,7 @@
-// Import type CardType
+// Import modules
 import { CardType } from "../types/cards.types";
-import { launchSearch } from "../utils/launchSearch";
 
+// Définition de la fonction cards
 export const cards = (card: CardType) => {
   // Crée un élément de div pour contenir la carte
   const cardElements = document.createElement("div");
@@ -59,17 +59,3 @@ export const cards = (card: CardType) => {
   cardElements.innerHTML = cardTemplate;
   return cardElements;
 };
-
-// Appel de la fonction launchSearch au chargement de la page
-window.addEventListener("DOMContentLoaded", () => {
-  launchSearch();
-});
-
-// Récuperation de mon input
-const searchInput = document.querySelector("#search-input");
-// Faire un event dans mon input pour appliquer un filtre de mes recipes
-if (searchInput) {
-  searchInput.addEventListener("input", () => {
-    launchSearch();
-  });
-}

@@ -1,6 +1,3 @@
-// Importation de la fonction createTags depuis le fichier ../utils/createTags
-import { createTags } from "../utils/createTags";
-
 // Définition de la fonction tags
 export const tags = () => {
   // Création d'un nouvel élément div pour contenir la liste de balises
@@ -18,11 +15,6 @@ export const tags = () => {
 
   // Insertion du modèle de balises dans l'élément div
   tagsListElement.innerHTML = tagsTemplate;
-
-  // Appel de la fonction createTags après un délai de 50 millisecondes
-  setTimeout(() => {
-    createTags();
-  }, 50);
 
   // Retour de l'élément div contenant la liste de balises
   return tagsListElement;
